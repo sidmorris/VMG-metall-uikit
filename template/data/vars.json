@@ -1,0 +1,27 @@
+{
+  "phone"         : [ "+7 (926) 000-00-00", "+7 (926) 111-11-11" ],
+  
+  "site"          : {
+    "baseUrl"     : "",
+    "logo"        : "logo.png"
+  },
+
+  "path"          : {
+    "img"         : "img/"
+  },
+  
+  "page"          : {
+    "title"       : "заголовок страницы",
+    "description" : "описание страницы"
+  },
+  
+  "topMenuPage"       : [
+    { "title"     : "Домашняя", "url" : "index.html", "alias" : "home" },
+    { "title"     : "Каталог", "url" : "catalog.html", "alias" : "catalog" }
+  ],
+	
+	"topMenuHome"       : [
+    { "title"     : "Домашняя", "url" : "index.html", "alias" : "home" },
+    { "title"     : "Каталог", "url" : "#catalog-home", "alias" : "catalog" }
+  ]
+}

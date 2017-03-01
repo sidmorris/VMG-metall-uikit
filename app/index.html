@@ -1,64 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="ru">
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Главная</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script>
-		window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')
-
-	</script>
-	<script src="js/uikit.min.js"></script>
-
-	<link rel="stylesheet" href="css/metal-theme.min.css">
-
-	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
-
-<body>
-	<!--[if lt IE 8]>
-			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-
-	<div class="uk-container uk-container-expand">
-		<div class="uk-background-cover header-home" style="background-image: url(images/header-bg.jpg);">
-			<nav class="uk-navbar-container uk-navbar-transparent uk-margin">
-				<div class="uk-container">
-					<div uk-navbar>
-						<div class="uk-navbar-left">
-							<a class="uk-navbar-item uk-logo" href="#">Logo</a>
-							<ul class="uk-navbar-nav">
-								<li class="uk-active"><a class="uk-button-text" href="#">Главная</a></li>
-								<li><a class="uk-button-text" href="#">Продукция</a></li>
-								<li><a class="uk-button-text" href="#">Фотогалерея</a></li>
-								<li><a class="uk-button-text" href="#">Контакты</a></li>
-							</ul>
-						</div>
-						<div class="uk-navbar-right">
-							<a class="uk-navbar-toggle" href="#offcanvas" uk-navbar-toggle-icon uk-toggle></a>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</div>
-	<div id="offcanvas" uk-offcanvas="flip: true; overlay: true">
-		<div class="uk-offcanvas-bar">
-			<ul class="uk-nav uk-nav-default">
-				<li class="uk-active"><a href="#">Главная</a></li>
-				<li><a href="#">Продукция</a></li>
-				<li><a href="#">Фотогалерея</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
-			<button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">Закрыть</button>
-		</div>
-	</div>
-	<script src="js/main.js"></script>
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <title>Главная</title>
+    <meta name="description" content="Домашняя страница">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+    <script src="js/uikit.min.js"></script>
+    <link rel="stylesheet" href="css/metal-theme.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <div class="page-home">
+      <header>
+        <div class="uk-container uk-container-expand"></div>
+        <div class="uk-background-cover header-home" style="background-image: url(images/header-bg.jpg);">
+          <nav class="uk-navbar-container uk-navbar-transparent uk-margin">
+            <div class="uk-container">
+              <div uk-navbar="">
+                <div class="uk-navbar-left"><a class="uk-navbar-item uk-logo" href="index.html">Logo</a>
+                  <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a class="uk-button-text" href="index.html">Главная</a></li>
+                    <li><a class="uk-button-text" href="catalog.html">Каталог</a></li>
+                    <li><a class="uk-button-text" href="gallery.html">Фотогалерея</a></li>
+                    <li><a class="uk-button-text" href="contact.html">Контакты</a></li>
+                  </ul>
+                </div>
+                <div class="uk-navbar-right"><a class="uk-navbar-toggle" href="#offcanvas" uk-navbar-toggle-icon="" uk-toggle=""></a></div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div id="offcanvas" uk-offcanvas="flip: true; overlay: true">
+          <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-default">
+              <li class="uk-active"><a href="#">Главная</a></li>
+              <li><a href="#">Продукция</a></li>
+              <li><a href="#">Фотогалерея</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">&Zcy;&acy;&kcy;&rcy;&ycy;&tcy;&softcy;</button>
+          </div>
+        </div>
+        <div class="wrap-header" style="background-image:url(img/header-bg.jpg);">
+          <div class="container">
+            <div class="row">
+              <nav class="navbar navbar-toggleable-sm">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"><span class="text-white"></span><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand text-white" href="index.html">Logo</a>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                  </ul>
+                </div>
+                <div class="phone">
+                  <div class="phone-namber"><i class="fa fa-phone" aria-hidden="true"></i>+7 (000) 000-00-00</div>
+                </div>
+              </nav>
+              <h1 class="site-header-title">Металлоконструкции<span class="accent-2">на заказ</span></h1>
+            </div>
+            <div class="promo-servise">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="promo-servise-item"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                    <h4 class="promo-servise-item-desc">Мангалы любых размеров.</h4>
+                  </div>
+                  <div class="promo-servise-item"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                    <h4 class="promo-servise-item-desc">Навесы из поликарбоната для автомобилей.</h4>
+                  </div>
+                  <div class="promo-servise-item"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                    <h4 class="promo-servise-item-desc">Летние беседки  для отдыха.</h4>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="promo-servise-item"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                    <h4 class="promo-servise-item-desc">Ограждения для газонов, решетки на окна.</h4>
+                  </div>
+                  <div class="promo-servise-item"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                    <h4 class="promo-servise-item-desc">Садовая и дачная мебель.</h4>
+                  </div>
+                  <div class="promo-servise-item"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+                    <h4 class="promo-servise-item-desc">Вольеры для домашних животных.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="home-service">
+        <div class="container">
+          <div class="row">
+            <h2 class="section-title">Наша Продукция</h2>
+            <div class="wrap">
+              <div class="service-item">
+                <div class="service-item-img"><img src="img/home/service-item-lestnica.jpg"></div>
+                <div class="service-item-info">
+                  <h5 class="service-item-info-title">Лестницы</h5>
+                  <div class="service-item-info-desc">
+                    Изготовление мангалов по индивидуальным заказам, любой конфигурации.
+                    По Вашим чертежам, или на выбор из нашего каталога.
+                  </div><a class="readmore" href="#">Подробнее</a>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-img"><img src="img/home/service-item-naves.jpg"></div>
+                <div class="service-item-info">
+                  <h5 class="service-item-info-title">Навесы</h5>
+                  <div class="service-item-info-desc">
+                    Изготовление мангалов по индивидуальным заказам, любой конфигурации.
+                    По Вашим чертежам, или на выбор из нашего каталога.
+                  </div><a class="readmore" href="#">Подробнее</a>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-img"><img src="img/home/service-item-mangal.jpg"></div>
+                <div class="service-item-info">
+                  <h5 class="service-item-info-title">Мангалы</h5>
+                  <div class="service-item-info-desc">
+                    Изготовление мангалов по индивидуальным заказам, любой конфигурации.
+                    По Вашим чертежам, или на выбор из нашего каталога.
+                  </div><a class="readmore" href="#">Подробнее</a>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-img"><img src="img/home/service-item-mangal.jpg"></div>
+                <div class="service-item-info">
+                  <h5 class="service-item-info-title">Мангалы</h5>
+                  <div class="service-item-info-desc">
+                    Изготовление мангалов по индивидуальным заказам, любой конфигурации.
+                    По Вашим чертежам, или на выбор из нашего каталога.
+                  </div><a class="readmore" href="#">Подробнее</a>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item-img"><img src="img/home/service-item-mangal.jpg"></div>
+                <div class="service-item-info">
+                  <h5 class="service-item-info-title">Мангалы</h5>
+                  <div class="service-item-info-desc">
+                    Изготовление мангалов по индивидуальным заказам, любой конфигурации.
+                    По Вашим чертежам, или на выбор из нашего каталога.
+                  </div><a class="readmore" href="#">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home-gallery">
+        <div class="container">
+          <div class="row">
+            <h2 class="section-title">Наши Работы</h2>
+          </div>
+          <div class="row">
+            <div class="gallery-item"><a href="https://dummyimage.com/1200x900/36c/fff.jpg"><img src="https://dummyimage.com/400x300/36c/fff.jpg"></a></div>
+            <div class="gallery-item"><a href="https://dummyimage.com/1200x900/c36/fff.jpg"><img src="https://dummyimage.com/400x300/c36/fff.jpg"></a></div>
+            <div class="gallery-item"><a href="https://dummyimage.com/1200x900/46c/fff.jpg"><img src="https://dummyimage.com/400x300/46c/fff.jpg"></a></div>
+            <div class="gallery-item"><a href="https://dummyimage.com/1200x900/36c/fff.jpg"><img src="https://dummyimage.com/400x300/36c/fff.jpg"></a></div>
+            <div class="gallery-item"><a href="https://dummyimage.com/1200x900/c36/fff.jpg"><img src="https://dummyimage.com/400x300/c36/fff.jpg"></a></div>
+            <div class="gallery-item"><a href="https://dummyimage.com/1200x900/46c/fff.jpg"><img src="https://dummyimage.com/400x300/46c/fff.jpg"></a></div>
+            <div class="gallery-item"><a href="https://dummyimage.com/1200x900/36c/fff.jpg"><img src="https://dummyimage.com/400x300/36c/fff.jpg"></a></div>
+            <div class="gallery-item"><a href="https://dummyimage.com/1200x900/c36/fff.jpg"><img src="https://dummyimage.com/400x300/c36/fff.jpg"></a></div>
+            <div class="gallery-item"><a href="https://dummyimage.com/1200x900/46c/fff.jpg"><img src="https://dummyimage.com/400x300/46c/fff.jpg"></a></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

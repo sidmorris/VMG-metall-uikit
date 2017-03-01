@@ -1,3 +1,4 @@
+var fs = require('fs');
 var gulp           = require('gulp'),
 		gutil          = require('gulp-util' ),
 		browserSync    = require('browser-sync').create(),
@@ -6,10 +7,11 @@ var gulp           = require('gulp'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		cleanCSS       = require('gulp-clean-css'),
 		rename         = require('gulp-rename'),
+		pug            = require('gulp-pug'),
 		path           = require('path');
- 
 
-gulp.task('serve', ['less'], function() {
+
+gulp.task('serve', ['less', 'pug'], function() {
 
     browserSync.init({
 			server: {
@@ -19,12 +21,22 @@ gulp.task('serve', ['less'], function() {
     });
 
     gulp.watch("app/less/**/*.less", ['less']);
+		gulp.watch('template/**/*.pug', ['pug']);
     gulp.watch("app/*.html").on('change', browserSync.reload);
-}); 
- 
- 
- 
- 
+});
+
+
+gulp.task('pug', function buildHTML() {
+	return gulp.src('template/*.pug')
+		.pipe(pug({
+			pretty: true,
+			data: {
+				"global": JSON.parse(fs.readFileSync('template/data/vars.json', 'utf-8'))
+			}
+		}))
+		.pipe(gulp.dest('app'))
+});
+
 gulp.task('less', function () {
   return gulp.src('app/less/*.less')
 		.pipe(sourcemaps.init())

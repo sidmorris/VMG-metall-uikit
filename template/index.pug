@@ -1,0 +1,12 @@
+extends layout/tmp-default
+
+
+append varPage
+  - var pageTitle = 'Главная'
+  - var pageDesc = 'Домашняя страница'
+  - var pageClass = '-home'
+
+
+block content
+  include component/home-service.pug
+  include component/home-gallery.pug
