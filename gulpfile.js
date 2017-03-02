@@ -7,6 +7,7 @@ var gulp           = require('gulp'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		cleanCSS       = require('gulp-clean-css'),
 		rename         = require('gulp-rename'),
+		//rigger         = require('gulp-rigger'),
 		pug            = require('gulp-pug'),
 		path           = require('path');
 
@@ -21,6 +22,7 @@ gulp.task('serve', ['less', 'pug'], function() {
     });
 
     gulp.watch("app/less/**/*.less", ['less']);
+		//gulp.watch('template-html/**/*.html', ['template']);
 		gulp.watch('template/**/*.pug', ['pug']);
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
@@ -35,7 +37,15 @@ gulp.task('pug', function buildHTML() {
 			}
 		}))
 		.pipe(gulp.dest('app'))
+		
 });
+
+// gulp.task('template', function () {
+//   	return	gulp.src('template-html/**/*.html') //Выберем файлы по нужному пути
+//         .pipe(rigger()) //Прогоним через rigger
+//         .pipe(gulp.dest('app')) //Выплюнем их в папку build
+//         .pipe(browserSync.reload({stream: true})); //И перезагрузим наш сервер для обновлений
+// });
 
 gulp.task('less', function () {
   return gulp.src('app/less/*.less')

@@ -1,12 +1,15 @@
 header
-  .uk-container.uk-container-expand
-  .uk-background-cover.header-home(style='background-image: url(images/header-bg.jpg);')
-    nav.uk-navbar-container.uk-navbar-transparent.uk-margin
+  .header-home.uk-navbar-container(style='background-image: url(images/header-bg.jpg);')
+    nav.uk-navbar-container
       .uk-container
-        div(uk-navbar='')
+        div('uk-navbar')
           .uk-navbar-left
             a.uk-navbar-item.uk-logo(href='index.html') Logo
-            ul.uk-navbar-nav
+          .uk-navbar-center
+            .phone(class='uk-hidden@m')
+              .phone-namber
+                | +7(000) 000-00-00
+            ul.uk-navbar-nav(class='uk-visible@m')
               li(class={'uk-active': pageTitle === 'Главная'})
                 a.uk-button-text(href='index.html') Главная
               li(class={'uk-active': pageTitle === 'Каталог'})
@@ -16,72 +19,36 @@ header
               li(class={'uk-active': pageTitle === 'Контакты'})
                 a.uk-button-text(href='contact.html') Контакты
           .uk-navbar-right
-            a.uk-navbar-toggle(href='#offcanvas', uk-navbar-toggle-icon='', uk-toggle='')
+            .phone(class='uk-visible@m')
+              .phone-namber
+                | +7(000) 000-00-00
+            a.uk-navbar-toggle(class='uk-hidden@m' href='#offcanvas' uk-navbar-toggle-icon='' uk-toggle='')
+              span.uk-margin-small-right Меню
+
+    .promo-wrap.uk-container
+      .promo-home.uk-grid.uk-text-center
+        div(class='uk-width-1-2@s')
+          p.promo-home-desc ooooooooo
+          p.promo-home-desc oooooooooooooooooooooo
+          p.promo-home-desc oooooooooooooooooooooooooooooo
+          p.promo-home-desc oooooooooooooooooooooo
+        div(class='uk-width-1-2@s')
+          p.promo-home-desc oooooooooooooooooooooooooooooo
+          p.promo-home-desc ooooooooooooooooooooooooooo
+          p.promo-home-desc oooooooooooooooooooooo
+          p.promo-home-desc oooooooooooo
+
+
+
   #offcanvas(uk-offcanvas='flip: true; overlay: true')
     .uk-offcanvas-bar
       ul.uk-nav.uk-nav-default
-        li.uk-active
-          a(href='#') Главная
-        li
-          a(href='#') Продукция
-        li
-          a(href='#') Фотогалерея
-        li
-          a(href='#') Контакты
-      |
-      button.uk-button.uk-button-default.uk-offcanvas-close.uk-width-1-1.uk-margin(type='button') &Zcy;&acy;&kcy;&rcy;&ycy;&tcy;&softcy;
-
-
-
-
-
-
-  .wrap-header(style="background-image:url(img/header-bg.jpg);")
-    .container
-      .row
-        nav.navbar.navbar-toggleable-sm
-          button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarToggle', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
-            span.text-white
-            i.fa.fa-bars(aria-hidden='true')
-          a.navbar-brand.text-white(href='index.html') Logo
-          #navbarToggle.collapse.navbar-collapse
-            ul.navbar-nav
-              li.nav-item(class={active: pageTitle === 'Главная'})
-                a.nav-link(href='index.html') Главная
-              li.nav-item(class={active: pageTitle === 'Каталог'})
-                a.nav-link(href='catalog.html') Каталог
-          .phone
-            .phone-namber
-              i.fa.fa-phone(aria-hidden='true')
-              |+7 (000) 000-00-00
-        h1.site-header-title
-          |Металлоконструкции
-          span.accent-2 на заказ
-      .promo-servise
-        .row
-          .col-sm-6
-            .promo-servise-item
-              i.fa.fa-check-square-o(aria-hidden='true')
-              h4.promo-servise-item-desc
-                | Мангалы любых размеров.
-            .promo-servise-item
-              i.fa.fa-check-square-o(aria-hidden='true')
-              h4.promo-servise-item-desc
-                | Навесы из поликарбоната для автомобилей.
-            .promo-servise-item
-              i.fa.fa-check-square-o(aria-hidden='true')
-              h4.promo-servise-item-desc
-                | Летние беседки  для отдыха.
-          .col-sm-6
-            .promo-servise-item
-              i.fa.fa-check-square-o(aria-hidden='true')
-              h4.promo-servise-item-desc
-                | Ограждения для газонов, решетки на окна.
-            .promo-servise-item
-              i.fa.fa-check-square-o(aria-hidden='true')
-              h4.promo-servise-item-desc
-                | Садовая и дачная мебель.
-            .promo-servise-item
-              i.fa.fa-check-square-o(aria-hidden='true')
-              h4.promo-servise-item-desc
-                | Вольеры для домашних животных.
+        li(class={'uk-active': pageTitle === 'Главная'})
+          a.uk-button-text(href='index.html') Главная
+        li(class={'uk-active': pageTitle === 'Каталог'})
+          a.uk-button-text(href='catalog.html') Каталог
+        li(class={'uk-active': pageTitle === 'Фотогалерея'})
+          a.uk-button-text(href='gallery.html') Фотогалерея
+        li(class={'uk-active': pageTitle === 'Контакты'})
+          a.uk-button-text(href='contact.html') Контакты
+      button.uk-button.uk-button-default.uk-offcanvas-close.uk-width-1-1.uk-margin(type='button') Закрыть
