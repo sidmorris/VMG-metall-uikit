@@ -1,0 +1,13 @@
+.svg-before(@icon, @size) {
+    .uk-icon;
+
+    &:before {
+        content            : '';
+        .svg-fill( '../images/icons/@{icon}.svg',  "#000", @navbar-nav-item-hover-color);
+        width              : @size;
+        height             : @size;
+        background-repeat  : no-repeat;
+        background-position: 50% 50%;
+        float              : left;
+    }
+};
