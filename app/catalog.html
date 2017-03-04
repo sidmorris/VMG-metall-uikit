@@ -10,8 +10,8 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/metal-theme.min.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
@@ -19,7 +19,7 @@
     <div class="page-catalog">
       <header>
         <div class="header-home uk-navbar-container" style="background-image: url(images/header-bg.jpg);">
-          <nav class="uk-navbar-container">
+          <nav class="uk-navbar-container" id="sticky">
             <div class="uk-container">
               <div uk-navbar>
                 <div class="uk-navbar-left"><a class="uk-navbar-item uk-logo" href="index.html">Logo</a></div>
@@ -43,26 +43,46 @@
             </div>
           </nav>
           <div class="promo-wrap uk-container">
-            <div class="promo-home uk-grid uk-text-center">
+            <div class="promo-home uk-grid">
               <div class="uk-width-1-2@s">
-                <p class="promo-home-desc">ooooooooo</p>
-                <p class="promo-home-desc">oooooooooooooooooooooo</p>
-                <p class="promo-home-desc">oooooooooooooooooooooooooooooo</p>
-                <p class="promo-home-desc">oooooooooooooooooooooo</p>
+                <div class="promo-home-desc"><span uk-icon="icon: bookmark"></span>
+                  <div class="promo-home-desc-item">Мангалы любых размеров.</div>
+                </div>
+                <div class="promo-home-desc"><span uk-icon="icon: bookmark"></span>
+                  <div class="promo-home-desc-item"> Навесы из поликарбоната для автомобилей.</div>
+                </div>
+                <div class="promo-home-desc"><span uk-icon="icon: bookmark"></span>
+                  <div class="promo-home-desc-item">Летние беседки для отдыха.</div>
+                </div>
               </div>
               <div class="uk-width-1-2@s">
-                <p class="promo-home-desc">oooooooooooooooooooooooooooooo</p>
-                <p class="promo-home-desc">ooooooooooooooooooooooooooo</p>
-                <p class="promo-home-desc">oooooooooooooooooooooo</p>
-                <p class="promo-home-desc">oooooooooooo</p>
+                <div class="promo-home-desc"><span uk-icon="icon: bookmark"></span>
+                  <div class="promo-home-desc-item">Ограждения для газонов, решетки на окна.</div>
+                </div>
+                <div class="promo-home-desc"><span uk-icon="icon: bookmark"></span>
+                  <div class="promo-home-desc-item">Садовая и дачная мебель.</div>
+                </div>
+                <div class="promo-home-desc"><span uk-icon="icon: bookmark"></span>
+                  <div class="promo-home-desc-item">Вольеры для домашних животных.</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="promo-home-desc" uk-icon="icon: check">ooooooooo</div><a href="" uk-icon="icon: heart">111</a>
       </header>
+      <div id="offcanvas" uk-offcanvas="flip: true; overlay: true">
+        <div class="uk-offcanvas-bar">
+          <ul class="uk-nav">
+            <li><a class="uk-button-text" href="index.html">Главная</a></li>
+            <li class="uk-active"><a class="uk-button-text" href="catalog.html">Каталог</a></li>
+            <li><a class="uk-button-text" href="gallery.html">Фотогалерея</a></li>
+            <li><a class="uk-button-text" href="contact.html">Контакты</a></li>
+          </ul>
+        </div><span id="stiky-point" uk-icon="icon: heart"></span>
+        <p> 111</p>
+      </div>
       <p>Каталог продукции</p>
     </div>
-    <script src="js/main.js"></script>
+    <!--script(src="js/main.js")-->
   </body>
 </html>

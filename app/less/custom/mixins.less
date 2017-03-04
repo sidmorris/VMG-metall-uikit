@@ -1,3 +1,20 @@
+// Mixin Braeckpoints
+// ===========================================================
+
+.bp-s(@rules){
+  @media (min-width: @breakpoint-small){@rules();}
+}
+.bp-m(@rules){
+  @media (min-width: @breakpoint-medium){@rules();}
+}
+.bp-l(@rules){
+  @media (min-width: @breakpoint-large){@rules();}
+}
+.bp-x(@rules){
+  @media (min-width: @breakpoint-xlarge){@rules();}
+}
+
+
 .svg-before(@icon, @size) {
     .uk-icon;
 
@@ -11,3 +28,17 @@
         float              : left;
     }
 };
+
+
+// Mixin Font-face
+// ===================================================================================
+.font(@fontName; @urlName: @fontName; @weight: normal; @style: normal) {
+  font-family: '@{fontName}';
+  src: url('/fonts/@{urlName}/@{urlName}.eot');
+  src: url('/fonts/@{urlName}/@{urlName}.eot#iefix') format('embedded-opentype'),
+  url('/fonts/@{urlName}/@{urlName}.woff') format('woff'),
+    url('/fonts/@{urlName}/@{urlName}.ttf') format('truetype'),
+    url('/fonts/@{urlName}/@{urlName}.svg') format('svg');
+    font-weight: @weight;
+    font-style: @style;
+}

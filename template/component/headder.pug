@@ -1,6 +1,6 @@
 header
   .header-home.uk-navbar-container(style='background-image: url(images/header-bg.jpg);')
-    nav.uk-navbar-container
+    nav.uk-navbar-container#sticky
       .uk-container
         div('uk-navbar')
           .uk-navbar-left
@@ -26,17 +26,38 @@ header
               span.uk-margin-small-right Меню
 
     .promo-wrap.uk-container
-      .promo-home.uk-grid.uk-text-center
+      .promo-home.uk-grid
         div(class='uk-width-1-2@s')
-          p.promo-home-desc ooooooooo
-          p.promo-home-desc oooooooooooooooooooooo
-          p.promo-home-desc oooooooooooooooooooooooooooooo
-          p.promo-home-desc oooooooooooooooooooooo
+          .promo-home-desc
+            span(uk-icon="icon: bookmark")
+            .promo-home-desc-item Мангалы любых размеров.
+          .promo-home-desc
+            span(uk-icon="icon: bookmark")
+            .promo-home-desc-item  Навесы из поликарбоната для автомобилей.
+          .promo-home-desc
+            span(uk-icon="icon: bookmark")
+            .promo-home-desc-item Летние беседки для отдыха.
         div(class='uk-width-1-2@s')
-          p.promo-home-desc oooooooooooooooooooooooooooooo
-          p.promo-home-desc ooooooooooooooooooooooooooo
-          p.promo-home-desc oooooooooooooooooooooo
-          p.promo-home-desc oooooooooooo
+          .promo-home-desc
+            span(uk-icon="icon: bookmark")
+            .promo-home-desc-item Ограждения для газонов, решетки на окна.
+          .promo-home-desc
+            span(uk-icon="icon: bookmark")
+            .promo-home-desc-item Садовая и дачная мебель.
+          .promo-home-desc
+            span(uk-icon="icon: bookmark")
+            .promo-home-desc-item Вольеры для домашних животных.
+#offcanvas(uk-offcanvas='flip: true; overlay: true')
+  .uk-offcanvas-bar
+    ul.uk-nav
+      li(class={'uk-active': pageTitle === 'Главная'})
+        a.uk-button-text(href='index.html') Главная
+      li(class={'uk-active': pageTitle === 'Каталог'})
+        a.uk-button-text(href='catalog.html') Каталог
+      li(class={'uk-active': pageTitle === 'Фотогалерея'})
+        a.uk-button-text(href='gallery.html') Фотогалерея
+      li(class={'uk-active': pageTitle === 'Контакты'})
+        a.uk-button-text(href='contact.html') Контакты
 
-  .promo-home-desc(uk-icon="icon: check") ooooooooo
-  a(href="" uk-icon="icon: heart") 111
+  span#stiky-point(uk-icon="icon: heart")
+  p  111
