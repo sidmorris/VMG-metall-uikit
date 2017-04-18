@@ -1,0 +1,20 @@
+header.ms-header-wrap
+  .ms-section-top-nav.uk-section-primary
+    .uk-container
+      nav.uk-navbar-container.tm-navbar-container.uk-navbar-transparent(uk-navbar='')
+        .uk-navbar-left
+          a.uk-navbar-item.uk-logo(class='uk-visible@s', href='index.html')= global.logo.text
+        .uk-navbar-center
+          .ms-phone.uk-margin-right(class='uk-hidden@m')
+            span.uk-margin-small-right(uk-icon='icon:receiver')
+            span= global.phone
+          div(class="uk-visible@m")
+            include _nav-top.pug
+        .uk-navbar-right
+          .ms-phone.uk-margin-right(class='uk-visible@m')
+            span.uk-margin-small-right(uk-icon='icon:receiver')
+            span= global.phone
+          a.uk-navbar-toggle(class='uk-hidden@m', uk-toggle='', uk-navbar-toggle-icon='', href='#mobil')
+  .ms-section-header.uk-section-muted
+    .uk-container.uk-container-small
+      h1.ms-header-title= pageTitle

@@ -1,0 +1,67 @@
+{
+	"phone": "+7 (926) 000-00-00",
+	"mail": " ivan160881@mail.ru",
+	"address": "Московская обл. г.Балашиха, ул.Пехра-Покровская, д.8А",
+	"logo": {
+		"img": "logo.png",
+		"text": "VMG-Metall"
+	},
+	"path": {
+		"img": "img/"
+	},
+	"page": {
+		"title": "заголовок страницы",
+		"description": "Металлоконструкции на заказ"
+	},
+	"topMenuPage": [{
+			"title": "Главная",
+			"url": "index.html",
+			"alias": "home"
+        },
+		{
+			"title": "Каталог",
+			"url": "catalog.html",
+			"alias": "catalog"
+        },
+		{
+			"title": "Фотогалерея",
+			"url": "gallery.html",
+			"alias": "gallery"
+        }
+    ],
+	"menuCatalog": [{
+			"title": "Мангалы",
+			"url": "catalog-mangal.html",
+			"alias": "mangal",
+			"imgHomeCard": "img/home/service-item-mangal.jpg"
+        },
+		{
+			"title": "Навесы",
+			"url": "catalog-naves.html",
+			"alias": "naves",
+			"imgHomeCard": "img/home/service-item-naves.jpg"
+        },
+		{
+			"title": "Лестницы",
+			"url": "catalog-lestnica.html",
+			"alias": "lestnica",
+			"imgHomeCard": "img/home/service-item-lestnica.jpg"
+        }
+    ],
+	"menuGallery": [{
+			"title": "Мангалы",
+			"url": "gallery_html/mangal.html",
+			"alias": "mangal"
+        },
+		{
+			"title": "Навесы",
+			"url": "gallery_html/naves.html",
+			"alias": "naves"
+        },
+		{
+			"title": "Лестницы",
+			"url": "gallery_html/lestnica.html",
+			"alias": "lestnica"
+        }
+    ]
+}

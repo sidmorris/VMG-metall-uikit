@@ -1,3 +1,4 @@
+var fs = require('fs');
 var gulp           = require('gulp'),
 		gutil          = require('gulp-util' ),
 		sass           = require('gulp-sass'),
@@ -12,7 +13,21 @@ var gulp           = require('gulp'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		sourcemaps     = require('gulp-sourcemaps'),
 		ftp            = require('vinyl-ftp'),
+		pug            = require('gulp-pug'),
 		notify         = require("gulp-notify");
+
+
+gulp.task('pug', function buildHTML() {
+	return gulp.src(['template/**/*.pug', '!template/**/_*.pug' ])
+	.pipe(pug({
+			pretty: true,
+			data: {
+				"global": JSON.parse(fs.readFileSync('template/data/global.json', 'utf-8'))
+			}
+		}))
+		.pipe(gulp.dest('app'))
+});
+
 
 // Скрипты проекта
 
@@ -62,8 +77,9 @@ gulp.task('sass', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
+gulp.task('watch', ['pug', 'sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.scss', ['sass']);
+	gulp.watch('template/**/*.pug', ['pug']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
@@ -71,27 +87,27 @@ gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
 	.pipe(cache(imagemin()))
-	.pipe(gulp.dest('dist/img'));
+	.pipe(gulp.dest('assets/img'));
 });
 
-gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
+gulp.task('build', ['removeassets', 'imagemin', 'sass', 'js'], function() {
 
 	var buildFiles = gulp.src([
 		'app/*.html',
 		'app/.htaccess',
-		]).pipe(gulp.dest('dist'));
+		]).pipe(gulp.dest('assets'));
 
 	var buildCss = gulp.src([
 		'app/css/main.min.css',
-		]).pipe(gulp.dest('dist/css'));
+		]).pipe(gulp.dest('assets/css'));
 
 	var buildJs = gulp.src([
 		'app/js/scripts.min.js',
-		]).pipe(gulp.dest('dist/js'));
+		]).pipe(gulp.dest('assets/js'));
 
 	var buildFonts = gulp.src([
 		'app/fonts/**/*',
-		]).pipe(gulp.dest('dist/fonts'));
+		]).pipe(gulp.dest('assets/fonts'));
 
 });
 
@@ -106,15 +122,15 @@ gulp.task('deploy', function() {
 	});
 
 	var globs = [
-	'dist/**',
-	'dist/.htaccess',
+	'assets/**',
+	'assets/.htaccess',
 	];
 	return gulp.src(globs, {buffer: false})
 	.pipe(conn.dest('/path/to/folder/on/server'));
 
 });
 
-gulp.task('removedist', function() { return del.sync('dist'); });
+gulp.task('removeassets', function() { return del.sync('assets'); });
 gulp.task('clearcache', function () { return cache.clearAll(); });
 
 gulp.task('default', ['watch']);

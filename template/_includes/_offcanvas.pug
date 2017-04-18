@@ -1,0 +1,7 @@
+#mobil(uk-offcanvas='flip: true;')
+  .uk-offcanvas-bar
+    button.uk-offcanvas-close(type='button', uk-close='')
+    ul.uk-nav.uk-nav-default
+      each i in global.topMenuPage
+        li(class={'uk-active': pageTitle === i.title})
+          a(href='/' + i.url)= i.title

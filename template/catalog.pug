@@ -1,0 +1,11 @@
+extends _layout/_default.pug
+
+
+append varPage
+  - var pageTitle = 'Каталог'
+  - var pageDesc = 'Домашняя страница'
+  - var pageClass = '-catalog'
+
+
+block content
+  +filter-gallery

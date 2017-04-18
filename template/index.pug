@@ -1,0 +1,13 @@
+extends _layout/_default.pug
+
+
+append varPage
+  - var pageTitle = 'Главная'
+  - var pageDesc = 'Домашняя страница'
+  - var pageClass = '-home'
+
+
+block content
+  include _component/_home/_service.pug
+  include _component/_home/_gallery.pug
+  include _component/_home/_contact.pug

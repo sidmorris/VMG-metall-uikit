@@ -1,0 +1,22 @@
+include ../_mixins/_mixin.pug
+
+block varPage
+  - var pageTitle = global.page.title
+  - var pageDesc = global.page.description
+  - var pageClass = '-default'
+
+
+doctype html
+html.no-js(lang="ru")
+  head
+    include ../_includes/_head.pug
+
+  body
+    div.uk-offcanvas-content(class='page' + pageClass)
+      if pageClass == "-home"
+        include ../_includes/_headder-home.pug
+      else
+        include ../_includes/_headder-page.pug
+      block content
+      include ../_includes/_footer.pug
+    include ../_includes/_offcanvas.pug
