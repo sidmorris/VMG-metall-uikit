@@ -1,1 +1,11 @@
-section
+.ms-section-home-gallery.uk-section
+  .uk-container
+    h2.ms-section-title.uk-text-center.text-white Фотогалерея
+    .grid.gallery.uk-grid-collapse(class='uk-child-width-1-3@s uk-child-width-1-4@m', uk-grid='')
+      each item in gallery.home
+        .grid-item.uk-transition-toggle.uk-light
+          a(href= item.link)
+            img(src= item.link, alt= item.title)
+            .uk-overlay-primary.uk-position-cover.uk-transition-fade
+            .uk-position-center
+              span.uk-transition-fade(uk-icon='icon: plus; ratio: 2')

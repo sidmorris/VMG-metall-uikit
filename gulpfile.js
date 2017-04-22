@@ -22,7 +22,8 @@ gulp.task('pug', function buildHTML() {
 	.pipe(pug({
 			pretty: true,
 			data: {
-				"global": JSON.parse(fs.readFileSync('template/data/global.json', 'utf-8'))
+				"global": JSON.parse(fs.readFileSync('template/data/global.json', 'utf-8')),
+				"gallery": JSON.parse(fs.readFileSync('template/data/gallery.json', 'utf-8'))
 			}
 		}))
 		.pipe(gulp.dest('app'))
@@ -44,6 +45,7 @@ gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/magnific-popup/jquery.magnific-popup.js',
 		'app/libs/isotope.pkgd.min.js',
+		'app/libs/imagesloaded.pkgd.js',
 		'app/libs/OwlCarousel2-2.2.1/dist/owl.carousel.js',
 		'app/js/common.min.js' // Всегда в конце
 		])

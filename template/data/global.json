@@ -20,31 +20,37 @@
         },
 		{
 			"title": "Каталог",
-			"url": "catalog.html",
+			"url": "catalog_html/mangal.html",
 			"alias": "catalog"
         },
 		{
 			"title": "Фотогалерея",
-			"url": "gallery.html",
+			"url": "gallery_html/mangal.html",
 			"alias": "gallery"
         }
     ],
 	"menuCatalog": [{
 			"title": "Мангалы",
-			"url": "catalog-mangal.html",
+			"url": "/catalog_html/mangal.html",
 			"alias": "mangal",
+			"descHomeHeader": "Мангалы любых размеров",
+			"descHomeCard": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 			"imgHomeCard": "img/home/service-item-mangal.jpg"
         },
 		{
 			"title": "Навесы",
-			"url": "catalog-naves.html",
+			"url": "/catalog_html/naves.html",
 			"alias": "naves",
+			"descHomeHeader": "Навесы любых размеров",
+			"descHomeCard": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 			"imgHomeCard": "img/home/service-item-naves.jpg"
         },
 		{
 			"title": "Лестницы",
-			"url": "catalog-lestnica.html",
+			"url": "/catalog_html/lestnica.html",
+			"descHomeHeader": "Лестницы наружние и внутренние, любых размеров",
 			"alias": "lestnica",
+			"descHomeCard": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 			"imgHomeCard": "img/home/service-item-lestnica.jpg"
         }
     ],

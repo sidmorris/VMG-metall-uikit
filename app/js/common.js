@@ -22,12 +22,14 @@ $(function() {
 		}
 	});
 
-	$('.grid').masonry({
-	  // options
-	  itemSelector: '.grid-item'
-	  //columnWidth: 25,
-		//percentPosition: true
+
+
+	var $grid = $('.grid').imagesLoaded( function() {
+	  $grid.masonry({
+	    itemSelector: '.grid-item'			
+	  });
 	});
+
 // =========== magnificPopup ======================================= //
 
 	$('.gallery').each(function() { // the containers for all your galleries

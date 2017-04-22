@@ -1,1 +1,13 @@
-section
+.ms-section-promo.uk-section
+  .uk-container
+    h2.ms-section-title.uk-text-center.uk-text-primary Наша продукция
+    .owl-carousel.home-promo
+      each card in global.menuCatalog
+        .uk-card
+          .uk-card-media-top
+            img(src= card.imgHomeCard, alt= card.title)
+          .uk-card-body
+            h3.uk-card-title= card.title
+            p= card.descHomeCard
+            p(uk-margin='')
+              a.uk-button.uk-button-primary(href= card.url) Подробнее

@@ -3,7 +3,7 @@ header.ms-header-wrap
     .uk-container
       nav.uk-navbar-container.tm-navbar-container.uk-navbar-transparent(uk-navbar='')
         .uk-navbar-left
-          a.uk-navbar-item.uk-logo(class='uk-visible@s', href= global.topMenuPage[0].url)= global.logo.text
+          a.uk-navbar-item.uk-logo(class='uk-visible@s', href='/' + global.topMenuPage[0].url)= global.logo.text
         .uk-navbar-center
           .ms-phone.uk-margin-right(class='uk-hidden@m')
             span.uk-margin-small-right(uk-icon='icon:receiver')
@@ -19,21 +19,7 @@ header.ms-header-wrap
     .uk-container.uk-container-small
       h1.ms-header-title= global.page.description
       .uk-text-center(class='uk-text-left@s uk-child-width-1-2@s', uk-grid='', uk-scrollspy='target:> a; cls:uk-animation-fade; delay: 300')
-        a.ms-header-promo(href='')
-          span.uk-margin-small-right(uk-icon='icon: check')
-          |  Lorem ipsum dolor sit amet
-        a.ms-header-promo(href='')
-          span.uk-margin-small-right(uk-icon='icon: check')
-          |  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-        a.ms-header-promo(href='')
-          span.uk-margin-small-right(uk-icon='icon: check')
-          |  Lorem ipsum dolor sit amet
-        a.ms-header-promo(href='')
-          span.uk-margin-small-right(uk-icon='icon: check')
-          |  Lorem ipsum dolor sit amet
-        a.ms-header-promo(href='')
-          span.uk-margin-small-right(uk-icon='icon: check')
-          |  Lorem ipsum dolor sit amet
-        a.ms-header-promo(href='')
-          span.uk-margin-small-right(uk-icon='icon: check')
-          |  Lorem ipsum dolor sit amet
+        each i in global.menuCatalog
+          a.ms-header-promo(href= i.url)
+            span.uk-margin-small-right(uk-icon='icon: check')
+            span= i.descHomeHeader

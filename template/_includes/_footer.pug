@@ -1,2 +1,28 @@
-footer
-  
+.uk-section.section-footer
+  .uk-container.uk-light
+    .uk-grid-small(uk-grid='')
+      .footer-logo.uk-width-1-5.uk-text-center
+        a(href='/' + global.topMenuPage[0].url)= global.logo.text
+      .footer-contact.uk-width-4-5
+        .uk-grid(class='uk-child-width-1-3@s' uk-grid='')
+          .phone
+            span.uk-text-warning Телефон:
+            span +7 (926) 000-00-00
+          .mail
+            span.uk-text-warning E-Mail:
+            span ivan160881@mail.ru
+          .adres
+            span.uk-text-warning Адрес:
+            span Московская обл. г.Балашиха, ул.Пехра-Покровская, д.8А
+.uk-section.uk-light.section-footer-bottom
+  .uk-container
+    nav.uk-navbar-footer(uk-navbar='')
+      ul.uk-navbar-nav.uk-navbar-left
+        li.uk-active
+          a(href='') Мангалы
+        li
+          a(href='') Лестницы
+        li
+          a(href='') Навесы
+      .uk-navbar-right
+        a(href='#', uk-totop='', uk-scroll='')

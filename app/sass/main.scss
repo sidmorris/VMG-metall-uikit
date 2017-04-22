@@ -141,6 +141,16 @@ body {
 
 .ms-section-home-gallery {
 	background: $accent-8;
+	.grid-item {
+		padding: 2px;
+		img {
+			border-radius: 5px;
+			//border       : 1px solid #cbcbcd;
+		}
+		.uk-position-cover {
+			border-radius: 5px;
+		}
+	}
 }
 .section-home-map {
 	padding: 0;

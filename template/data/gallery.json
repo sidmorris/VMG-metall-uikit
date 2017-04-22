@@ -1,0 +1,28 @@
+{
+	"home": [
+		{
+			"link": "/img/gallery/lestnica-01.jpeg",
+			"title": "Лестница наружняя"
+    },
+		{
+			"link": "/img/gallery/mangal/03.jpg",
+			"title": "Мангал"
+    },
+		{
+			"link": "/img/gallery/naves/03.jpg",
+			"title": "Навесы"
+    },
+		{
+			"link": "/img/gallery/lestnica-02.jpeg",
+			"title": "Лестница наружняя"
+    },
+		{
+			"link": "/img/gallery/mangal/01.jpg",
+			"title": "Мангал"
+    }
+  ],
+	"lestnica": [
+		"/img/gallery/lestnica-01.jpeg",
+		"/img/gallery/lestnica-02.jpeg"
+  ]
+}
