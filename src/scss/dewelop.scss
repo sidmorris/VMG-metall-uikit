@@ -1,0 +1,100 @@
+@import "src/scss/uikit/src/scss/variables-theme.scss";
+@import "src/scss/site/variables.scss";
+@import "src/scss/site/mixins.scss";
+
+.s-herou.uk-section {
+  h1.s-herou-title {
+    color    : $color-accent-2;
+    font-size: 24px;
+    @include small {
+      font-size: 30px;
+    };
+  }
+  p.s-herou-desc {
+    font-size    : 16px;
+    margin-bottom: 150px;
+    color        : $comment-meta-color;
+    @include small {
+      font-size: 20px;
+    };
+  }
+  .s-customers {
+    &-title {
+      color         : $close-color;
+      font-size     : 16px;
+      text-transform: uppercase;
+
+    }
+    .s-card-customers {
+      img {
+        margin-bottom: 10px;
+      }
+      &-title {
+        font-size: 16px;
+        color    : $comment-meta-color;
+      }
+    }
+  }
+}
+
+.head-section {
+  .title {
+    margin-bottom : 0;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    margin: 4px 0;
+  }
+}
+.nav-left {
+  position  : relative;
+  right     : 0;
+  transition: right 0.3s ease-out 0s;
+  &:hover {
+    text-decoration: none;
+    right          : 20px;
+  }
+  &::after {
+    content  : 'предыдущий';
+    font-size: 14px;
+  }
+}
+.nav-right {
+  position  : relative;
+  left      : 0;
+  transition: left 0.3s ease-out 0s;
+  &:hover {
+    text-decoration: none;
+    left           : 20px;
+  }
+  &::before {
+    content  : 'следующий';
+    font-size: 14px;
+  }
+}
+
+.border-section,
+.border-top-section {
+  border-bottom: 1px solid $color-accent-1;
+}
+
+.s-card.uk-card {
+  padding-bottom: 30px;
+  .s-card-img {
+    width: 100%;
+  }
+  .s-card-img-overlay {
+    cursor: pointer;
+  }
+  .uk-card-body {
+    padding-top: 25px;
+  }
+  .s-card-body {
+    p {
+      color: #9e9e9e;
+    }
+  }
+}
+.s-offcanvas {
+  border-left: 1px solid $color-accent-1;
+}

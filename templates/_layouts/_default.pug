@@ -1,0 +1,15 @@
+include ../_mixins/_mixin.pug
+
+block varPage
+  - var pageTitle = global.page.title
+  - var pageDesc = global.page.description
+  - var pageClass = '-default'
+
+
+doctype html
+html
+  head
+    include ../_includes/_head.pug
+
+  body(class='page' + pageClass)
+    block content

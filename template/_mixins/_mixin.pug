@@ -1,7 +1,0 @@
-
-
-mixin filter-gallery()
-  .uk-container
-    .uk-button-group.ms-filter-gallery
-      each item in global.menuGallery
-        a.uk-button.uk-button-primary(class={'uk-active': alias === item.alias} href='/' + item.url)= item.title
