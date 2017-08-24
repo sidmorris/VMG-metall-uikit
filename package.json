@@ -17,7 +17,6 @@
 		"gulp-clean-css": "^3.7.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-imagemin": "^3.3.0",
-		"gulp-markdown": "^1.2.0",
 		"gulp-notify": "^3.0.0",
 		"gulp-pug": "^3.3.0",
 		"gulp-rename": "^1.2.2",

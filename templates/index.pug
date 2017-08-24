@@ -10,62 +10,14 @@ append varPage
 block content
 
   .uk-offcanvas-content
-    +section-top
-    +section-herou
 
-    div#projekt-1.border-section.uk-section-secondary.uk-section-small()
-      div.uk-container
-        div.s-card.uk-card.uk-grid-collapse(class="uk-child-width-1-2@s" uk-grid="")
-          div(class="uk-width-1-2@m")
-            div.uk-card-header
-              div(uk-grid="").uk-grid-small.uk-flex-middle
-                div.uk-width-auto(style="color: #ff5722; padding-left: 0;")
-                  span(uk-icon="icon: bookmark; ratio: 2;")
-                  div.uk-inline
-                    p.uk-margin-remove-bottom Январь
-                    p.uk-margin-remove 2016г
-                div.uk-width-expand
-                  h4.uk-card-title.uk-margin-remove-bottom(style="color: #ff9800;")  КРАСНАЯ ПРЕСНЯ
-                  p.uk-text-meta.uk-margin-remove-top г. Москва, стадион «Красная Пресня»
-            div.uk-cover-container
-              div(class="uk-inline uk-dark uk-transition-toggle" uk-lightbox="")
-                img.s-card-img(src="img/light.jpg" )
-                //- canvas(width="600" height="400")
-                #lightbox-1-1.s-card-img-overlay.uk-overlay-primary.uk-position-cover.uk-transition-fade
-                  .uk-position-center
-                    span(uk-overlay-icon="")
+    include _includes/_section_top.pug
+    include _includes/_section-product.pug
+    include _includes/_section-gallery.pug
 
 
-
-          div(class="uk-width-1-2@m")
-            div.s-card-body.uk-card-body
-              p.uk-h6.uk-text-warning.uk-text-center.uk-text-uppercase
-                | Рекламно-информационное оформление Международного спортивного мероприятия мировой тур по сноуборду
-                <br/> «Гран при де Русси»
-              p Оформление трассы, зрительских трибун, кикеров, видеоэкранов, пультовых,стартовых площадок, входных групп.
-              p Используемые материалы:
-              p Баннерная ткань 520 гр/м с печатью 360 dpi, проварка усиленных швов с вваркой реп-шнура, установкой усиленных люверсов в соответствии с большими ветровыми нагрузками.
-              p Баннерная сетка 340 гр/м с печатью 360 dpi,проварка усиленных швов с вваркой реп-шнура, установкой усиленных люверсов в соответствии с большими ветровыми нагрузками.
-              button#lightbox-1-2.uk-button.uk-button-default.uk-width-1-1 Посмотреть Фотоотчет
-
-      script.
-
-        (function () {
-          $('#lightbox-1-1, #lightbox-1-2').on('click', function (e) {
-            e.preventDefault();
-
-            UIkit.lightboxPanel({
-              items: [
-                {source: 'img/light.jpg', caption: '900x600'},
-                {source: 'img/dark.jpg', caption: '700x500'},
-              ]
-            }).show();
-          });
-
-        })();
 
     #menu(uk-offcanvas="flip: true; mode: reveal")
       div.s-offcanvas.uk-offcanvas-bar
         button(class="uk-offcanvas-close" type="button" uk-close="")
-        ul.uk-nav.uk-nav-default
-          li: a(href="#projekt-1") КРАСНАЯ ПРЕСНЯ
+        include _includes/_nav.pug

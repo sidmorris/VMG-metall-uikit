@@ -1,0 +1,25 @@
+div.s-top-nav.uk-section.uk-section-primary.uk-padding-remove-vertical(uk-sticky="show-on-up: true; animation: uk-animation-slide-top")
+  div.uk-container.uk-navbar-transparent
+    nav(uk-navbar="")
+      div.uk-navbar-left
+        div.uk-navbar-item
+          a.uk-navbar-item.uk-logo(href="#") VMG-Name
+      div.uk-navbar-center(class="uk-visible@s")
+        include _nav.pug
+      div.uk-navbar-right(class="uk-hidden@s")
+        button.uk-float-right(uk-toggle="target: #menu" type="button" uk-icon="icon: menu; ratio: 1.8;")
+
+
+div.s-header.uk-section.uk-section-default
+  div.uk-container
+    h1.s-header-title
+      | Металлоконструкции 
+      br
+      span на заказ
+    div.s-header-promo.uk-grid-small(class="uk-child-width-1-2@m" uk-grid="")
+      +header-promo("Навесы из поликарбоната для автомобилей.")
+      +header-promo("Мангалы любых размеров.")
+      +header-promo("Летние беседки для отдыха.")
+      +header-promo("Ограждения для газонов, решетки на окна.")
+      +header-promo("Садовая и дачная мебель.")
+      +header-promo("Вольеры для домашних животных.")

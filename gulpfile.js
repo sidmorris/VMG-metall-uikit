@@ -14,12 +14,12 @@ var gulp           = require('gulp'),
 		sourcemaps     = require('gulp-sourcemaps'),
 		ftp            = require('vinyl-ftp'),
 		pug            = require('gulp-pug'),
-		markdown       = require('gulp-markdown'),
+
 		notify         = require("gulp-notify"),
 		rsync          = require('gulp-rsync');
 
 
-		gulp.task('pug', ['markdown'], function buildHTML() {
+		gulp.task('pug', function buildHTML() {
 			return gulp.src(['templates/**/*.pug', '!templates/**/_*.pug' ])
 			.pipe(pug({
 					pretty: true,
@@ -30,12 +30,7 @@ var gulp           = require('gulp'),
 				.pipe(gulp.dest('src'))
 		});
 
-		gulp.task('markdown', function () {
-    return gulp.src('templates/_md/**/*.md')
-				.pipe(rename({suffix: '', prefix : '_'}))
-        .pipe(markdown())
-        .pipe(gulp.dest('templates/_md'));
-});
+
 
 
 // Скрипты проекта
@@ -76,7 +71,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('scss', function() {
-	return gulp.src('src/scss/dewelop.scss')
+	return gulp.src('src/scss/site.scss')
 	.pipe(sourcemaps.init())
 	.pipe(scss({outputStyle: 'expand'}).on("error", notify.onError()))
 	.pipe(autoprefixer(['last 15 versions']))
@@ -88,10 +83,9 @@ gulp.task('scss', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('watch', ['scss', 'js',  'pug', 'markdown', 'browser-sync'], function() {
+gulp.task('watch', ['scss', 'js',  'pug', 'browser-sync'], function() {
 	gulp.watch('src/scss/**/*.scss', ['scss']);
 	gulp.watch('templates/**/*.pug', ['pug']);
-	gulp.watch('templates/_md/**/*.md', ['markdown']);
 	gulp.watch(['libs/**/*.js', 'src/js/common.js'], ['js']);
 	gulp.watch('src/*.html', browserSync.reload);
 });

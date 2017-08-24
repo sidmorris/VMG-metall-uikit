@@ -1,0 +1,55 @@
+.s-page-home{
+  .s-header{
+    background-color : $color-accent-1;
+    .s-header-title{
+      text-align : center;
+      font-size : 20px;
+      text-transform : uppercase;
+      color : $color-accent-3;
+      span{
+        color : $color-accent-4;
+      }
+      @include small(){
+        font-size : 50px;
+      }
+    }
+    .s-header-promo{
+      a.s-header-promo-item{
+        color : $color-accent-3;
+        &:hover{
+          text-decoration : none;
+          color : $color-accent-4;
+        }
+        .s-promo-desc{
+          display : inline;
+          font-size : 18px;
+        }
+      }
+      @include small(){
+        .s-promo-desc{
+          font-size : 20px;
+        }
+      }
+      @include medium(){
+        a.s-header-promo-item{
+          &:nth-child(odd){
+            padding-left : 12%;
+          }
+          &:nth-child(even){
+            padding-left : 5%;
+          }
+        };
+        @include xlarge(){
+          a.s-header-promo-item{
+            &:nth-child(odd){
+              padding-left : 0;
+            }
+            &:nth-child(even){
+              padding-left : 9%;
+            }
+          }
+        };
+      }
+    }
+  }
+}

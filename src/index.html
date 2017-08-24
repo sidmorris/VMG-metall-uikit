@@ -19,149 +19,126 @@
       <!-- iOS Safari-->
       <meta name="apple-mobile-web-app-status-bar-style" content="#000">
       <link rel="stylesheet" href="css/site.min.css">
-      <link rel="stylesheet" href="css/dewelop.min.css">
       <script src="js/scripts.min.js"></script>
     </head>
   </head>
-  <body class="page-home">
+  <body class="s-page-home">
     <div class="uk-offcanvas-content">
-      <div class="border-top-section uk-section uk-section-secondary uk-padding-remove-vertical" uk-sticky="show-on-up: true; animation: uk-animation-slide-top">
+      <div class="s-top-nav uk-section uk-section-primary uk-padding-remove-vertical" uk-sticky="show-on-up: true; animation: uk-animation-slide-top">
         <div class="uk-container uk-navbar-transparent">
           <nav uk-navbar="">
             <div class="uk-navbar-left">
               <div class="uk-navbar-item"><a class="uk-navbar-item uk-logo" href="#">VMG-Name</a></div>
             </div>
-            <div class="uk-navbar-right ">
-              <p style="font-size: 20px; margin-bottom: 6px; padding-right: 7px;">Меню</p>
+            <div class="uk-navbar-center uk-visible@s">
+              <ul class="uk-nav uk-nav-default">
+                <li class="uk-active"><a href="">Домашняя</a></li>
+              </ul>
+            </div>
+            <div class="uk-navbar-right uk-hidden@s">
               <button class="uk-float-right" uk-toggle="target: #menu" type="button" uk-icon="icon: menu; ratio: 1.8;"></button>
             </div>
           </nav>
         </div>
       </div>
-      <div class="s-herou border-section uk-section uk-section-secondary" uk-height-viewport="offset-top:true">
+      <div class="s-header uk-section uk-section-default">
         <div class="uk-container">
-          <div>
-            <div class="uk-container"></div>
-            <h1 class="s-herou-title uk-text-uppercase"><span>Оформление</span><br/>рекламно-информационных
-              мероприятий
-            </h1>
-            <p class="s-herou-desc">Изготовление выставочных стендов, объемных букв, световых вывесок.</p>
+          <h1 class="s-header-title">Металлоконструкции <br><span>на заказ</span></h1>
+          <div class="s-header-promo uk-grid-small uk-child-width-1-2@m" uk-grid=""><a class="s-header-promo-item" href=""><span uk-icon="icon: bookmark; ratio: 1.2"> </span>
+              <div class="s-promo-desc">Навесы из поликарбоната для автомобилей.</div></a><a class="s-header-promo-item" href=""><span uk-icon="icon: bookmark; ratio: 1.2"> </span>
+              <div class="s-promo-desc">Мангалы любых размеров.</div></a><a class="s-header-promo-item" href=""><span uk-icon="icon: bookmark; ratio: 1.2"> </span>
+              <div class="s-promo-desc">Летние беседки для отдыха.</div></a><a class="s-header-promo-item" href=""><span uk-icon="icon: bookmark; ratio: 1.2"> </span>
+              <div class="s-promo-desc">Ограждения для газонов, решетки на окна.</div></a><a class="s-header-promo-item" href=""><span uk-icon="icon: bookmark; ratio: 1.2"> </span>
+              <div class="s-promo-desc">Садовая и дачная мебель.</div></a><a class="s-header-promo-item" href=""><span uk-icon="icon: bookmark; ratio: 1.2"> </span>
+              <div class="s-promo-desc">Вольеры для домашних животных.</div></a>
           </div>
-          <div class="s-customers" uk-grid="">
-            <div class="uk-width-1-1">
-              <div class="uk-heading-line uk-text-center">
-                <h5 class="s-customers-title">Наши клиенты</h5>
-              </div>
-              <div class="uk-width-auto">
-                <div class="uk-child-width-auto uk-flex-center" uk-grid="">
-                  <div class="s-card-customers uk-card">
-                    <div class="uk-card-media-top"><img class="uk-align-center uk-border-circle" src="img/light.jpg" style="width:80px; height:80px;"/></div>
-                    <div class="uk-card-header uk-padding-remove-vertical">
-                      <div class="s-card-customers-title uk-card-title">
-                        <p class="uk-text-center">москомспорт</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="s-card-customers uk-card">
-                    <div class="uk-card-media-top"><img class="uk-align-center uk-border-circle" src="img/light.jpg" style="width:80px; height:80px;"/></div>
-                    <div class="uk-card-header uk-padding-remove-vertical">
-                      <div class="s-card-customers-title uk-card-title">
-                        <p class="uk-text-center">BMW</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="s-card-customers uk-card">
-                    <div class="uk-card-media-top"><img class="uk-align-center uk-border-circle" src="img/light.jpg" style="width:80px; height:80px;"/></div>
-                    <div class="uk-card-header uk-padding-remove-vertical">
-                      <div class="s-card-customers-title uk-card-title">
-                        <p class="uk-text-center">BOSH</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="s-card-customers uk-card">
-                    <div class="uk-card-media-top"><img class="uk-align-center uk-border-circle" src="img/light.jpg" style="width:80px; height:80px;"/></div>
-                    <div class="uk-card-header uk-padding-remove-vertical">
-                      <div class="s-card-customers-title uk-card-title">
-                        <p class="uk-text-center">Авторадио</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="s-card-customers uk-card">
-                    <div class="uk-card-media-top"><img class="uk-align-center uk-border-circle" src="img/light.jpg" style="width:80px; height:80px;"/></div>
-                    <div class="uk-card-header uk-padding-remove-vertical">
-                      <div class="s-card-customers-title uk-card-title">
-                        <p class="uk-text-center">Роза Хутор</p>
-                      </div>
-                    </div>
-                  </div>
+        </div>
+      </div>
+      <div class="s-section-product uk-section uk-section-default">
+        <div class="uk-container">
+          <h3 class="s-section-title">Наша продукция</h3>
+          <div class="uk-flex-center uk-child-width-1-3@l uk-child-width-1-2@s" uk-grid="">
+            <div class="s-card">
+              <div class="uk-card uk-card-small uk-border-rounded">
+                <div class="uk-card-header">
+                  <div class="uk-card-title">Мангалы</div>
                 </div>
+                <div class="uk-card-media-top uk-inline uk-dark uk-transition-toggle"><a href=""><img src="img/light.jpg">
+                    <div class="uk-transition-fade">
+                      <div class="uk-overlay-default uk-position-cover"></div>
+                      <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
+                    </div></a></div>
               </div>
-              <hr class="uk-divider-icon"/>
+            </div>
+            <div class="s-card">
+              <div class="uk-card uk-card-small uk-border-rounded">
+                <div class="uk-card-header">
+                  <div class="uk-card-title">Мангалы</div>
+                </div>
+                <div class="uk-card-media-top uk-inline uk-dark uk-transition-toggle"><a href=""><img src="img/light.jpg">
+                    <div class="uk-transition-fade">
+                      <div class="uk-overlay-default uk-position-cover"></div>
+                      <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
+                    </div></a></div>
+              </div>
+            </div>
+            <div class="s-card">
+              <div class="uk-card uk-card-small uk-border-rounded">
+                <div class="uk-card-header">
+                  <div class="uk-card-title">Мангалы</div>
+                </div>
+                <div class="uk-card-media-top uk-inline uk-dark uk-transition-toggle"><a href=""><img src="img/light.jpg">
+                    <div class="uk-transition-fade">
+                      <div class="uk-overlay-default uk-position-cover"></div>
+                      <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
+                    </div></a></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="border-section uk-section-secondary uk-section-small" id="projekt-1">
+      <div class="s-section-gallery uk-section uk-section-secondary">
         <div class="uk-container">
-          <div class="s-card uk-card uk-grid-collapse uk-child-width-1-2@s" uk-grid="">
-            <div class="uk-width-1-2@m">
-              <div class="uk-card-header">
-                <div class="uk-grid-small uk-flex-middle" uk-grid="">
-                  <div class="uk-width-auto" style="color: #ff5722; padding-left: 0;"><span uk-icon="icon: bookmark; ratio: 2;"></span>
-                    <div class="uk-inline">
-                      <p class="uk-margin-remove-bottom">Январь</p>
-                      <p class="uk-margin-remove">2016г</p>
-                    </div>
-                  </div>
-                  <div class="uk-width-expand">
-                    <h4 class="uk-card-title uk-margin-remove-bottom" style="color: #ff9800;"> КРАСНАЯ ПРЕСНЯ</h4>
-                    <p class="uk-text-meta uk-margin-remove-top">г. Москва, стадион «Красная Пресня»</p>
-                  </div>
-                </div>
-              </div>
-              <div class="uk-cover-container">
-                <div class="uk-inline uk-dark uk-transition-toggle" uk-lightbox=""><img class="s-card-img" src="img/light.jpg">
-                  <div class="s-card-img-overlay uk-overlay-primary uk-position-cover uk-transition-fade" id="lightbox-1-1">
-                    <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="uk-width-1-2@m">
-              <div class="s-card-body uk-card-body">
-                <p class="uk-h6 uk-text-warning uk-text-center uk-text-uppercase">
-                  Рекламно-информационное оформление Международного спортивного мероприятия мировой тур по сноуборду<br/> «Гран при де Русси»</p>
-                <p>Оформление трассы, зрительских трибун, кикеров, видеоэкранов, пультовых,стартовых площадок, входных групп.</p>
-                <p>Используемые материалы:</p>
-                <p>Баннерная ткань 520 гр/м с печатью 360 dpi, проварка усиленных швов с вваркой реп-шнура, установкой усиленных люверсов в соответствии с большими ветровыми нагрузками.</p>
-                <p>Баннерная сетка 340 гр/м с печатью 360 dpi,проварка усиленных швов с вваркой реп-шнура, установкой усиленных люверсов в соответствии с большими ветровыми нагрузками.</p>
-                <button class="uk-button uk-button-default uk-width-1-1" id="lightbox-1-2">Посмотреть Фотоотчет</button>
-              </div>
-            </div>
+          <h3 class="s-section-title">Наши работы</h3>
+          <div class="s-gallery-grid uk-column-1-2@s uk-column-1-3@m" uk-lightbox="">
+                  <div class="s-gallery-container uk-inline uk-dark uk-transition-toggle"><a href="img/size-h.jpg">
+                      <div class="s-gallery-item" style="background-image: url(/img/size-h.jpg);"></div>
+                      <div class="uk-overlay-primary uk-position-cover uk-transition-fade">
+                        <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
+                      </div></a></div>
+                  <div class="s-gallery-container uk-inline uk-dark uk-transition-toggle"><a href="img/dark.jpg">
+                      <div class="s-gallery-item" style="background-image: url(/img/dark.jpg);"></div>
+                      <div class="uk-overlay-primary uk-position-cover uk-transition-fade">
+                        <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
+                      </div></a></div>
+                  <div class="s-gallery-container uk-inline uk-dark uk-transition-toggle"><a href="img/light.jpg">
+                      <div class="s-gallery-item" style="background-image: url(/img/light.jpg);"></div>
+                      <div class="uk-overlay-primary uk-position-cover uk-transition-fade">
+                        <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
+                      </div></a></div>
+                  <div class="s-gallery-container uk-inline uk-dark uk-transition-toggle"><a href="img/size-h.jpg">
+                      <div class="s-gallery-item" style="background-image: url(/img/size-h.jpg);"></div>
+                      <div class="uk-overlay-primary uk-position-cover uk-transition-fade">
+                        <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
+                      </div></a></div>
+                  <div class="s-gallery-container uk-inline uk-dark uk-transition-toggle"><a href="img/size2.jpg">
+                      <div class="s-gallery-item" style="background-image: url(/img/size2.jpg);"></div>
+                      <div class="uk-overlay-primary uk-position-cover uk-transition-fade">
+                        <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
+                      </div></a></div>
+                  <div class="s-gallery-container uk-inline uk-dark uk-transition-toggle"><a href="img/size1.jpg">
+                      <div class="s-gallery-item" style="background-image: url(/img/size1.jpg);"></div>
+                      <div class="uk-overlay-primary uk-position-cover uk-transition-fade">
+                        <div class="uk-position-center"><span uk-overlay-icon=""></span></div>
+                      </div></a></div>
           </div>
         </div>
-        <script>
-          (function () {
-            $('#lightbox-1-1, #lightbox-1-2').on('click', function (e) {
-              e.preventDefault();
-          
-              UIkit.lightboxPanel({
-                items: [
-                  {source: 'img/light.jpg', caption: '900x600'},
-                  {source: 'img/dark.jpg', caption: '700x500'},
-                ]
-              }).show();
-            });
-          
-          })();
-          
-        </script>
       </div>
       <div id="menu" uk-offcanvas="flip: true; mode: reveal">
         <div class="s-offcanvas uk-offcanvas-bar">
           <button class="uk-offcanvas-close" type="button" uk-close=""></button>
           <ul class="uk-nav uk-nav-default">
-            <li><a href="#projekt-1">КРАСНАЯ ПРЕСНЯ</a></li>
+            <li class="uk-active"><a href="">Домашняя</a></li>
           </ul>
         </div>
       </div>

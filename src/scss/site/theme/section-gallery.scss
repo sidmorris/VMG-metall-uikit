@@ -1,0 +1,18 @@
+.s-section-gallery.uk-section{
+  padding-top : 40px;
+  .s-section-title{
+    margin-bottom : 40px;
+  }
+  .s-gallery-grid{
+    column-gap : 0;
+    column-rule-width : 0;
+  }
+  .s-gallery-item,
+  .s-gallery-container{
+    height : 400px;
+    width : 100%;
+    background-size : cover;
+    background-position : center center;
+    //display : inline-block;
+  }
+}

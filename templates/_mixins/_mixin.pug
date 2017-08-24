@@ -6,76 +6,13 @@ mixin filter-gallery()
       each item in global.menuGallery
         a.uk-button.uk-button-primary(class={'uk-active': alias === item.alias} href='/' + item.url)= item.title
 
-
-mixin section-top()
-  div.border-top-section.uk-section.uk-section-secondary.uk-padding-remove-vertical(uk-sticky="show-on-up: true; animation: uk-animation-slide-top")
-    div.uk-container.uk-navbar-transparent
-      nav(uk-navbar="")
-        div(class="uk-navbar-left")
-          div.uk-navbar-item
-            a.uk-navbar-item.uk-logo(href="#") VMG-Name
-        div(class="uk-navbar-right ")
-          p(style="font-size: 20px; margin-bottom: 6px; padding-right: 7px") Меню
-          button(class="uk-float-right" uk-toggle="target: #menu" type="button" uk-icon="icon: menu; ratio: 1.8;")
+mixin header-promo(text)
+  a.s-header-promo-item(href="")
+    span(uk-icon="icon: bookmark; ratio: 1.2") 
+    div.s-promo-desc= text
 
 
-mixin section-herou()
-  div(uk-height-viewport="offset-top:true").s-herou.border-section.uk-section.uk-section-secondary
-    div.uk-container
-      div
-        div.uk-container
-        h1.s-herou-title.uk-text-uppercase
-          span Оформление
-          br
-          | рекламно-информационных
-          | мероприятий
-        p.s-herou-desc
-          | Изготовление выставочных стендов, объемных букв, световых вывесок.
 
-      div.s-customers(uk-grid="")
-        div.uk-width-1-1
-          div.uk-heading-line.uk-text-center
-            h5.s-customers-title
-              | Наши клиенты
-          div.uk-width-auto
-            div.uk-child-width-auto.uk-flex-center(uk-grid="")
-
-              div.s-card-customers.uk-card
-                div.uk-card-media-top
-                  img.uk-align-center.uk-border-circle(src="img/light.jpg" style="width:80px; height:80px;")
-                div.uk-card-header.uk-padding-remove-vertical
-                  div.s-card-customers-title.uk-card-title
-                    p.uk-text-center москомспорт
-
-              div.s-card-customers.uk-card
-                div.uk-card-media-top
-                  img.uk-align-center.uk-border-circle(src="img/light.jpg" style="width:80px; height:80px;")
-                div.uk-card-header.uk-padding-remove-vertical
-                  div.s-card-customers-title.uk-card-title
-                    p.uk-text-center BMW
-
-              div.s-card-customers.uk-card
-                div.uk-card-media-top
-                  img.uk-align-center.uk-border-circle(src="img/light.jpg" style="width:80px; height:80px;")
-                div.uk-card-header.uk-padding-remove-vertical
-                  div.s-card-customers-title.uk-card-title
-                    p.uk-text-center BOSH
-
-              div.s-card-customers.uk-card
-                div.uk-card-media-top
-                  img.uk-align-center.uk-border-circle(src="img/light.jpg" style="width:80px; height:80px;")
-                div.uk-card-header.uk-padding-remove-vertical
-                  div.s-card-customers-title.uk-card-title
-                    p.uk-text-center Авторадио
-
-              div.s-card-customers.uk-card
-                div.uk-card-media-top
-                  img.uk-align-center.uk-border-circle(src="img/light.jpg" style="width:80px; height:80px;")
-                div.uk-card-header.uk-padding-remove-vertical
-                  div.s-card-customers-title.uk-card-title
-                    p.uk-text-center Роза Хутор
-
-          hr.uk-divider-icon
 
 
 
