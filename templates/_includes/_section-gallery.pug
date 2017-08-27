@@ -1,20 +1,23 @@
 mixin gallery-item(item)
   div.s-gallery-container.uk-inline.uk-dark.uk-transition-toggle
     a(href="img/"+ item)
-      div.s-gallery-item(style="background-image: url(/img/"+ item + ");")
+      //- div.s-gallery-item(style="background-image: url(/img/"+ item + ");")
       div.uk-overlay-primary.uk-position-cover.uk-transition-fade
         div.uk-position-center
           span(uk-overlay-icon="")
+    div.s-gallery-item(style="background-image: url(/img/"+ item + ");")
+    //- img.s-gallery-item(src="img/"+ item)
 
 
 
 div.s-section-gallery.uk-section.uk-section-secondary
   div.uk-container
     h3.s-section-title Наши работы
-    div.s-gallery-grid(class="uk-column-1-2@s uk-column-1-3@m" uk-lightbox="")
-      +gallery-item("size-h.jpg")
-      +gallery-item("dark.jpg")
-      +gallery-item("light.jpg")
-      +gallery-item("size-h.jpg")
-      +gallery-item("size2.jpg")
-      +gallery-item("size1.jpg")
+    //- div.s-gallery-grid(class="uk-column-1-2@s uk-column-1-3@m" uk-lightbox="")
+  div.s-gallery-grid(class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="" uk-lightbox="")
+    +gallery-item("size-h.jpg")
+    +gallery-item("dark.jpg")
+    +gallery-item("light.jpg")
+    +gallery-item("size-h.jpg")
+    +gallery-item("size2.jpg")
+    +gallery-item("size1.jpg")

@@ -1,0 +1,40 @@
+.s-footer.uk-section{
+  padding-top : 40px;
+  padding-bottom : 40px;
+  span.uk-icon,
+  .s-footer-contact-label{
+    color : $color-accent-2;
+  }
+  .s-footer-contact-item{
+    padding-left : 10px;
+  }
+  .uk-grid{
+    margin-top : 10px;
+  }
+}
+.s-footer{
+  //background-color : $color-accent-5;
+  color : #fff;
+  // min-height : 200px;
+  &-contact{
+    &-item,
+    &-label{
+      display : inline;
+    }
+    &-item{
+      color : $color-accent-1-2;
+      padding-left : 5px;
+    }
+    &-box{
+      margin-top : 10px;
+    }
+  }
+  .s-menu-footer{
+    &-continer{
+      text-align : center;
+      a{
+        margin-top : 10px;
+      }
+    }
+  }
+}

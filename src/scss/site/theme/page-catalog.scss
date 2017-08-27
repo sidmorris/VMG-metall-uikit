@@ -1,0 +1,48 @@
+.s-catalog.uk-section{
+  .s-sidedar{
+    li.uk-active > a{
+      position : relative;
+    }
+    li.uk-active > a:before{
+      content : "";
+      position : absolute;
+      top : 15px;
+      left : -25px;
+      width : 15px;
+      border-top : 1px solid #1e87f0;
+    }
+  }
+  .s-card-product{
+    border : 1px solid $base-hr-border;
+    @include medium(){
+      padding-left : 30px;
+    };
+    .uk-card-body{
+      &:first-child{
+        padding-top : 15px;
+      }
+    }
+    .uk-card-title{
+      span{
+        color : #666;
+        padding-left : 10px;
+        font-size: 16px;
+      }
+    }
+    .s-card-product-badge{
+      @include small(){
+        float : right;
+      };
+      padding : 15px;
+      font-size : 16px;
+      // margin-top : 5px;
+    }
+  }
+  .s-gallery-item{
+    height : 400px;
+    background-size : cover;
+    background-position : center center;
+    position : relative;
+    // display: inline-block;
+  }
+}

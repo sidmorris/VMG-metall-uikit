@@ -1,0 +1,34 @@
+include ../_mixins/_mixin.pug
+
+block varPage
+  - var pageTitle = "Мангалы"
+  - var pageDesc = global.page.description
+  - var pageClass = '-default'
+
+
+doctype html
+html
+  head
+    include ../_includes/_head.pug
+
+  body(class='s-page' + pageClass)
+    .uk-offcanvas-content
+      include ../_includes/_navbar-nav.pug
+
+      div.s-header.uk-section.uk-section-primary
+        div.uk-container
+          h1.s-header-title
+            | Галлерея
+            if pageTitle
+              span= " / " + pageTitle
+
+      block content
+        #menu(uk-offcanvas="flip: true; mode: reveal")
+          div.s-offcanvas.uk-offcanvas-bar
+            button(class="uk-offcanvas-close" type="button" uk-close="")
+            ul.uk-nav.uk-nav-default
+              include ../_includes/_nav-top.pug
+
+
+
+    include ../_includes/_section-footer.pug

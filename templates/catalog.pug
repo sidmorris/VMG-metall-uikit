@@ -1,0 +1,41 @@
+extends _layouts/_catalog.pug
+
+
+append varPage
+  - var pageTitle = 'Мангалы'
+  - var pageDesc = 'Страница Каталога'
+  - var pageClass = ''
+
+block content
+  div.s-card-product.uk-card.uk-card-default.uk-grid-collapse(class="" uk-grid="" uk-lightbox="")
+    div(class="uk-width-1-1")
+      div.uk-padding-remove-bottom.uk-card-header.uk-grid-small(uk-grid="")
+        div(class="uk-width-1-2@s")
+          h3.uk-card-title
+            | Title
+            span.uk-text-small
+              | Subtitle
+        div(class="uk-width-1-2@s")
+          span.s-card-product-badge.uk-badge 9000 руб.
+      hr.uk-margin-small
+    div.uk-card-media-left.uk-margin-top.uk-margin-bottom(class="uk-width-1-2@m")
+      //- div.s-cover
+      div.uk-inline.uk-dark.uk-transition-toggle
+        a(href="img/light.jpg")
+          img(src="img/light.jpg")
+          div.uk-transition-fade.uk-overlay-default.uk-position-cover
+            div.uk-position-center
+              span(uk-overlay-icon="")
+
+    div(class="uk-width-1-2@m")
+      div.uk-card-body
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+
+  //- div(class="card overlay")
+  //-   img(class="card-img-top img-fluid" src="")
+  //-   a(class="overlay-hover" href="")
+  //-     div.uk-position-center
+  //-       span(uk-overlay-icon="")

@@ -1,0 +1,25 @@
+div.s-top-nav.uk-section.uk-section-muted.uk-padding-remove-vertical(uk-sticky="show-on-up: true; animation: uk-animation-slide-top")
+  nav.uk-navbar-container.uk-navbar.uk-navbar-transparent
+    div.uk-navbar-left(class="uk-visible@s")
+      div.uk-navbar-item
+        a.uk-navbar-item.uk-logo(href="#") VMG-Name
+    div.uk-navbar-center
+      div.uk-navbar-item(class="uk-hidden@m")
+        span(uk-icon="icon: phone")
+        p.s-phone-top +7 (926) 000-00-00
+      div.uk-navbar-item(class="uk-visible@m")
+        ul.s-nav.uk-navbar-nav
+          li.uk-active: a(href="index.html") Домашняя
+          li: a(href="catalog.html") Каталог
+          div(uk-dropdown="")
+            ul.s-sub-nav.uk-nav.uk-dropdown-nav
+              li.uk-active: a(href="catalog.html") Мангалы
+              li: a(href="catalog.html") Item sub Nav
+          li: a(href="gallery.html") Галлерея
+
+    div.uk-navbar-right
+      div.uk-navbar-item(class="uk-visible@m")
+        span(uk-icon="icon: phone")
+        p.s-phone-top +7 (926) 000-00-00
+      button.uk-float-right(class="uk-hidden@m" uk-toggle="target: #menu" type="button" uk-icon="icon: menu; ratio: 1.8;")
+  hr

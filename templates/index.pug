@@ -10,14 +10,32 @@ append varPage
 block content
 
   .uk-offcanvas-content
+    include _includes/_navbar-nav.pug
+    div.s-header.uk-section.uk-section-default
+      div.uk-container
+        h1.s-header-title
+          | Металлоконструкции
+          br
+          span на заказ
+        div.s-header-promo.uk-grid-small(class="uk-child-width-1-2@m" uk-grid="")
+          +header-promo("Навесы из поликарбоната для автомобилей.")
+          +header-promo("Мангалы любых размеров.")
+          +header-promo("Летние беседки для отдыха.")
+          +header-promo("Ограждения для газонов, решетки на окна.")
+          +header-promo("Садовая и дачная мебель.")
+          +header-promo("Вольеры для домашних животных.")
 
-    include _includes/_section_top.pug
+
+
+
     include _includes/_section-product.pug
     include _includes/_section-gallery.pug
+    include _includes/_section-map.pug
 
 
 
     #menu(uk-offcanvas="flip: true; mode: reveal")
       div.s-offcanvas.uk-offcanvas-bar
         button(class="uk-offcanvas-close" type="button" uk-close="")
-        include _includes/_nav.pug
+        ul.uk-nav.uk-nav-default
+          include _includes/_nav-top.pug
